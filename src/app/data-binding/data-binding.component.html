@@ -1,1 +1,18 @@
-<p>data-binding works!</p>
+<section>
+  <article>
+    <h1>Titulo</h1>
+    <p>String: {{ url }}</p>
+    <p>Resultado de 1 + 1 é: {{ 1+1 }}</p>
+    <p>Resultado de 1 + 0 é: {{ getValor()}}</p>
+    <p>Angular: {{ getAngular() }}</p>
+  </article>
+
+  <article>
+    <h2>Image Test</h2>
+    <img src="{{urlImage}}" alt="" width="400">
+
+    <h2>Image Test - Property Binding</h2>
+    <img [src]="urlImage" alt="" width="400">
+  </article>
+
+</section>
