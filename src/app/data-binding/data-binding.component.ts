@@ -13,12 +13,34 @@ export class DataBindingComponent implements OnInit {
 
   urlImage = 'https://jjm-upload.s3.amazonaws.com/3dcfa9e8e0d399972408099fb9189921-xbox-series-x-jogos-exclusivos_jar5.jpg'
 
+  texto: string = '';
+
+  textoSalvo: string = ''
+
+  isMouseOver: boolean = false;
+
   getValor() {
     return 1;
   }
 
   getAngular() {
     return true;
+  }
+
+  handleClick() {
+    alert('well done!');
+  }
+
+  onKeyUp(event: KeyboardEvent) {
+    this.texto = (<HTMLInputElement>event.target).value;
+  }
+
+  saveValue(text) {
+    this.textoSalvo = text
+  }
+
+  onMouseOverOut() {
+    this.isMouseOver = !this.isMouseOver;
   }
 
   constructor() { }

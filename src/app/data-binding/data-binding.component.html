@@ -1,6 +1,7 @@
 <section>
   <article>
-    <h1>Titulo</h1>
+    <h1>Data Binding</h1>
+    <hr />
     <p>String: {{ url }}</p>
     <p>Resultado de 1 + 1 é: {{ 1+1 }}</p>
     <p>Resultado de 1 + 0 é: {{ getValor()}}</p>
@@ -8,15 +9,15 @@
   </article>
 
   <article>
-    <h2>Image Test</h2>
+    <h3>Image Test</h3>
     <img src="{{urlImage}}" alt="" width="400">
 
-    <h2>Image Test - Property Binding</h2>
+    <h3>Image Test - Property Binding</h3>
     <img [src]="urlImage" alt="" width="400">
   </article>
-
+  <hr />
   <article>
-    <h1>Class and Style Binding</h1>
+    <h2>Class and Style Binding</h2>
     <div>
       Selecione:
       <select #teste (change)="0" name="options" id="">
@@ -41,6 +42,27 @@
 
     </div>
   </article>
+</section>
 
+<hr />
+<section>
+  <h2>Event Binding</h2>
+  <div>
+    <button (click)="handleClick()" class="btn btn-primary">
+      Clique
+    </button>
 
+    <br><br>
+
+    <input type="text" (keyup)="onKeyUp($event)" (keyup.enter)="saveValue($event.target.value)"
+      (blur)="saveValue(spotInput.value)" #spotInput />
+    <br>
+    <p>Texto digitado: <strong>{{ texto }}</strong></p>
+    <p>Texto salvo pós ENTER ou perder o FOCO: <strong>{{ textoSalvo }}</strong></p>
+    <br><br>
+    <span (mouseover)="onMouseOverOut()" (mouseout)="onMouseOverOut()" [class.highlight]="isMouseOver">
+      Passe o mouse em cima de mim
+    </span>
+
+  </div>
 </section>
