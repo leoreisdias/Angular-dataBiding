@@ -15,4 +15,32 @@
     <img [src]="urlImage" alt="" width="400">
   </article>
 
+  <article>
+    <h1>Class and Style Binding</h1>
+    <div>
+      Selecione:
+      <select #teste (change)="0" name="options" id="">
+        <option value="alert-success">Sucesso</option>
+        <option value="alert-info">Info</option>
+        <option value="alert-warning">Warning</option>
+        <option value="alert-danger">Danger</option>
+      </select>
+      <br />
+      <br />
+
+      <div class="alert {{ teste.value }}">Texto que muda de acordo com o SELECT</div>
+
+      <div class="alert" role="alert" [class.alert-success]="teste.value == 'alert-success'">Sucesso</div>
+      <div class="alert" role="alert" [class.alert-info]="teste.value == 'alert-info'">Info</div>
+      <div class="alert" role="alert" [class.alert-warning]="teste.value =='alert-warning'">Warning</div>
+
+
+      <div class="alert alert-danger" role="alert" [style.display]="teste.value =='alert-danger'? 'block':'none'">Estilo
+        desse texto varia entre display: block e display: none, de acordo com o SELECT
+      </div>
+
+    </div>
+  </article>
+
+
 </section>
