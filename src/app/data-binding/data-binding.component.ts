@@ -19,6 +19,7 @@ export class DataBindingComponent implements OnInit {
 
   isMouseOver: boolean = false;
 
+
   getValor() {
     return 1;
   }
@@ -42,6 +43,9 @@ export class DataBindingComponent implements OnInit {
   onMouseOverOut() {
     this.isMouseOver = !this.isMouseOver;
   }
+
+
+
 
   constructor() { }
 
