@@ -2,4 +2,7 @@
 <hr>
 <hr>
 <hr>
-<app-ciclo-vida></app-ciclo-vida>
+<h2>Life-Cycle Component - console.log()</h2>
+<app-ciclo-vida [valorInicial]="valor" *ngIf="!deletarCiclo"></app-ciclo-vida>
+<button (click)="mudarValor()">Mudar Valor</button>
+<button (click)="destroyCycle()">Destruir Ciclo</button>
