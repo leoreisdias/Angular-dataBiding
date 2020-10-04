@@ -78,5 +78,7 @@
   <article>
     <h2>Input/Output Properties</h2>
     <app-input [nome]="nomeDeCursos"></app-input>
+
+    <contador [valor]="valorInicial" (mudouValor)="onMudarValor($event)"></contador>
   </article>
 </section>

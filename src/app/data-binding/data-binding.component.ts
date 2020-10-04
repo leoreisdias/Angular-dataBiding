@@ -21,6 +21,8 @@ export class DataBindingComponent implements OnInit {
 
   nomeDeCursos: string = 'angular'
 
+  valorInicial = 15;
+
   getValor() {
     return 1;
   }
@@ -47,6 +49,9 @@ export class DataBindingComponent implements OnInit {
 
 
 
+  onMudarValor(event) {
+    console.log(event.novoValor)
+  }
 
   constructor() { }
 
